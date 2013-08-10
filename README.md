@@ -11,13 +11,15 @@ Attempting to learn to use GitHub
                  Google Code Jam -- Practice in Python Problems
                  
 Problem A. Tic-Tac-Toe-Tomek
-
+See: 
 https://code.google.com/codejam/contest/2270488/dashboard
 
-For a problem stmt. 
-I have put small sample input file into: 
+...For a problem stmt. 
 
-file://C:\Python27\pdv\201305-CodeJam\TTToe-T-prjNotes.txt
+I have put small sample input file into the GitHub repository:
+a-small-practice.in
+
+BELOW is my 'stream-of-development' project notes: 
 
 Classic first step: use console-cmdline template to open and 'null proc' the
 input
@@ -56,3 +58,29 @@ AND OF COURSE--*that* is what I should do, now--i.e. re-write the same
 basic solution (same recognizer design) using Classes and objects...
 
 Someday... 
+--------------------------------------------------
+For Anyone foolish enough to 'pull' this from GitHub (pointless tho'
+that is), here is a bit of README-style user notes:
+
+clone the repository. then set up python (2.7- this is not modern Python!)
+in your path so that you can run from the clone directory.  Then the command:
+
+python TTT-Toemek.py a-small-practice.in
+
+... produces correct output from the CodeJam dashboard-specified small input
+I have also included the "large input file" -- 1000 games. 
+My code seems to process the large file OK -- my sample spot checks 
+seem to validate correctness. 
+
+HOWEVER I have *NOT* actually submitted either large or small output to 
+CodeJam for "points"- presumably CodeJam would validate the large output
+in some way.  I have *also* included 'j-unit' style tests for individual 
+parts of the final TTT-Toemek.py "recognizer algorithm" code.
+
+I was attempting to do 'TDD' (test driven development), but my "test 
+framework" simply cloned the initialization and framework of the 
+TTT-Toemek.py program itself-- calling out the recognizer code under
+test with comments.  This is lame but the tests could still serve if I were
+to (for example) modify the recognizer to NOT change the scoring array, a
+potential optimization I considered. And of course it did serve my initial
+development. 
