@@ -43,7 +43,7 @@ Progress-- recognizer is flaggy and the flags are wrong
 July 2013 - problem actually had to do with Python call-by-reference. 
 The win evaluation functions were corrupting the scoring array-- I
 coded it as though passing the scoring array made a copy of it-- not
-so, of course. Quick fix was to import copy and use copy.deepcopy()
+so in Python, of course. Quick fix was to import copy and use copy.deepcopy()
 to preserve a copy of the scoring array. 
 
 This was a good learning exercise, but took me way too long to debug. 
@@ -83,4 +83,9 @@ TTT-Toemek.py program itself-- calling out the recognizer code under
 test with comments.  This is lame but the tests could still serve if I were
 to (for example) modify the recognizer to NOT change the scoring array, a
 potential optimization I considered. And of course it did serve my initial
-development. 
+development.  
+
+Presumably a 'better' way (short of using a Py-Unit libr/framework) w/b to
+  1. Make an 'assert' function (or use one from Python libr's) 
+  2. Take adv of the fact that TTT-Toemek.py is "callable" as well as 
+     useable as __MAIN__ 
